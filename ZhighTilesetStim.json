@@ -1,0 +1,49 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+      "Chibi_Ultica",
+      "UltimateCataclysm",
+      "MshockXottoplus",
+      "UNDEAD_PEOPLE",
+      "UNDEAD_PEOPLE_BASE",
+      "UNDEAD_PEOPLE_LEGACY",
+      "UlticaShell",
+      "MshockXottoplus12",
+      "MSX++DEAD_PEOPLE",
+      "MXplus12_for_cosmetics",
+      "MSXotto+"
+    ],
+    "tiles-new": [
+      {
+        "file": "Zhigh_stims.png",
+        "tiles": [
+          { "id": "stim3BTG", "fg": 1 },
+          { "id": "adrenaline_injector", "fg": 2 },
+          { "id": "stimquikclot", "fg": 3 },
+          { "id": "stimL1", "fg": 5 },
+          { "id": "stimMeldonin", "fg": 7 },
+          { "id": "stimP22", "fg": 11 },
+          { "id": "perfotoran", "fg": 12 },
+          { "id": "stimPNB", "fg": 13 },
+          { "id": "stimpropital", "fg": 14 },
+          { "id": "stimSJ1", "fg": 15 },
+          { "id": "stimInv", "fg": 18 },
+          { "id": "stimTrimadol", "fg": 19 },
+          { "id": "antivenom", "fg": 20 },
+          { "id": "stimZagustin", "fg": 21 },
+          { "id": "vaccine_shot", "fg": 23 },
+          { "id": "stimmorphine", "fg": 22 },
+          { "id": "stimrx11", "fg": 24 },
+          { "id": "stimrx12", "fg": 25 },
+          { "id": "stimUdR513", "fg": 26 }
+        ],
+        "//": "range 1 to 128",
+        "sprite_width": 32,
+        "sprite_height": 32,
+        "sprite_offset_x": 0,
+        "sprite_offset_y": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "type": "SPELL",
+    "id": "zhigh_healing_dart",
+    "name": "Healing dart discharge",
+    "description": "Heal dart go pew pew.",
+    "valid_targets": [ "ally", "self" ],
+    "effect": "line_attack",
+    "sprite": "fd_null",
+    "flags": [ "SILENT", "RANDOM_DAMAGE", "NO_FAIL", "NO_HANDS", "NO_LEGS" ],
+    "min_damage": -18,
+    "max_damage": -10,
+    "min_range": 19,
+    "max_range": 19,
+    "damage_increment": 3.0,
+    "min_aoe": 6,
+    "max_aoe": 6,
+    "max_level": 40,
+    "message": "",
+    "extra_effects": [
+      { "id": "zhigh_regen_eff", "hit_self": false },
+      { "id": "zhigh_regen_eff", "hit_self": true }
+    ]
+  },
+  {
+    "id": "zhigh_regen_eff",
+    "type": "SPELL",
+    "name": { "str": "Regeneration effect" },
+    "description": "This creates the effect that heals the user and the ones nearby.",
+    "sprite": "fd_null",
+    "message": "",
+    "flags": [ "RANDOM_DAMAGE", "SILENT", "NO_FAIL", "NO_HANDS", "NO_LEGS" ],
+    "valid_targets": [ "ally", "self" ],
+    "effect": "target_attack",
+    "min_damage": -15,
+    "max_damage": -10,
+    "min_range": 19,
+    "max_range": 19,
+    "max_level": 40,
+    "min_aoe": 4,
+    "max_aoe": 4
+  }
+]

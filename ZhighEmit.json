@@ -1,0 +1,213 @@
+[
+  {
+    "id": "emit_nuke_burst",
+    "type": "emit",
+    "//": "small cloud of nuke",
+    "field": "fd_nuke_gas",
+    "intensity": 3,
+    "chance": 1,
+    "qty": 10
+  },
+  {
+    "id": "emit_nuke_cloud",
+    "type": "emit",
+    "//": "medium cloud of nuke",
+    "field": "fd_nuke_gas",
+    "intensity": 3,
+    "qty": 20
+  },
+  {
+    "id": "emit_nuke_cloud_big",
+    "type": "emit",
+    "//": "big cloud of nuke",
+    "field": "fd_nuke_gas",
+    "intensity": 3,
+    "qty": 40
+  },
+  {
+    "id": "fd_freeze",
+    "type": "field_type",
+    "intensity_levels": [
+      {
+        "name": "thin cold gas",
+        "sym": "5",
+        "color": "light_gray",
+        "dangerous": true,
+        "effects": [
+          {
+            "effect_id": "cold_zhigh",
+            "body_part": "num_bp",
+            "intensity": 1,
+            "min_duration": "2 seconds",
+            "max_duration": "2 seconds",
+            "immune_in_vehicle": true,
+            "is_environmental": false,
+            "message": "You feel cold. Real cold, almost subzero like.",
+            "message_npc": "<npcname> starts freezing!",
+            "message_type": "bad"
+          }
+        ]
+      },
+      {
+        "name": "cold gas",
+        "color": "light_gray",
+        "effects": [
+          {
+            "effect_id": "cold_zhigh",
+            "body_part": "num_bp",
+            "intensity": 2,
+            "min_duration": "4 seconds",
+            "max_duration": "4 seconds",
+            "immune_in_vehicle": true,
+            "is_environmental": true,
+            "message": "You feel cold. Real cold, almost subzero like.",
+            "message_npc": "<npcname> starts freezing!",
+            "message_type": "bad"
+          }
+        ]
+      },
+      {
+        "name": "thick cold gas",
+        "color": "light_gray",
+        "effects": [
+          {
+            "effect_id": "cold_zhigh",
+            "body_part": "num_bp",
+            "intensity": 3,
+            "min_duration": "6 seconds",
+            "max_duration": "6 seconds",
+            "immune_in_vehicle": true,
+            "is_environmental": true,
+            "message": "You feel cold. Real cold, almost subzero like.",
+            "message_npc": "<npcname> starts freezing!",
+            "message_type": "bad"
+          }
+        ]
+      }
+    ],
+    "decay_amount_factor": 20,
+    "percent_spread": 40,
+    "priority": 2,
+    "half_life": "8 minutes",
+    "phase": "gas",
+    "display_field": true,
+    "looks_like": "fd_fog"
+  },
+  {
+    "id": "emit_freeze_burst",
+    "type": "emit",
+    "//": "thin freeze gas",
+    "field": "fd_freeze",
+    "intensity": 3,
+    "chance": 1,
+    "qty": 10
+  },
+  {
+    "id": "emit_freeze_cloud",
+    "type": "emit",
+    "//": "freeze gas",
+    "field": "fd_freeze",
+    "intensity": 3,
+    "qty": 20
+  },
+  {
+    "id": "emit_freeze_cloud_big",
+    "type": "emit",
+    "//": "thicc freeze gas",
+    "field": "fd_freeze",
+    "intensity": 3,
+    "qty": 40
+  },
+  {
+    "id": "fd_heal",
+    "type": "field_type",
+    "intensity_levels": [
+      {
+        "name": "thin healing gas",
+        "sym": "5",
+        "color": "light_gray",
+        "dangerous": true,
+        "effects": [
+          {
+            "effect_id": "healing_gas_zhigh",
+            "body_part": "num_bp",
+            "intensity": 1,
+            "min_duration": "10 seconds",
+            "max_duration": "10 seconds",
+            "immune_in_vehicle": true,
+            "is_environmental": false,
+            "message": "You feel healed.",
+            "message_npc": "<npcname>'s wounds are closing like magic!",
+            "message_type": "good"
+          }
+        ]
+      },
+      {
+        "name": "healing gas",
+        "color": "light_gray",
+        "effects": [
+          {
+            "effect_id": "healing_gas_zhigh",
+            "body_part": "num_bp",
+            "intensity": 1,
+            "min_duration": "20 seconds",
+            "max_duration": "20 seconds",
+            "immune_in_vehicle": true,
+            "is_environmental": true,
+            "message": "You feel healed.",
+            "message_npc": "<npcname>'s wounds are closing like magic!",
+            "message_type": "good"
+          }
+        ]
+      },
+      {
+        "name": "thick healing gas",
+        "color": "light_gray",
+        "effects": [
+          {
+            "effect_id": "healing_gas_zhigh",
+            "body_part": "num_bp",
+            "intensity": 1,
+            "min_duration": "30 seconds",
+            "max_duration": "30 seconds",
+            "immune_in_vehicle": true,
+            "is_environmental": true,
+            "message": "You feel healed.",
+            "message_npc": "<npcname>'s wounds are closing like magic!",
+            "message_type": "good"
+          }
+        ]
+      }
+    ],
+    "priority": 5,
+    "half_life": "2 minutes",
+    "phase": "gas",
+    "display_field": true,
+    "looks_like": "fd_fog"
+  },
+  {
+    "id": "emit_heal_burst",
+    "type": "emit",
+    "//": "thin heal gas",
+    "field": "fd_heal",
+    "intensity": 3,
+    "chance": 1,
+    "qty": 10
+  },
+  {
+    "id": "emit_heal_cloud",
+    "type": "emit",
+    "//": "heal gas",
+    "field": "fd_heal",
+    "intensity": 3,
+    "qty": 20
+  },
+  {
+    "id": "emit_heal_cloud_big",
+    "type": "emit",
+    "//": "thicc heal gas",
+    "field": "fd_heal",
+    "intensity": 3,
+    "qty": 40
+  }
+]
