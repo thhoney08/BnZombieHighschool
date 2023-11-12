@@ -1,0 +1,31 @@
+[
+  {
+    "type": "item_group",
+    "id": "NC_Chairman_weapon",
+    "subtype": "distribution",
+    "entries": [ { "item": "camp_chair_zhigh" } ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_Chairman_worn",
+    "subtype": "collection",
+    "entries": [
+      { "item": "dress_shirt_zhigh" },
+      { "item": "tie_necktie_zhigh" },
+      { "item": "pants_zhigh" },
+      { "item": "blazer_zhigh" },
+      { "item": "socks" },
+      { "item": "sneakers" },
+      { "item": "wristwatch", "prob": 80 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_Chairman_carry",
+    "subtype": "collection",
+    "entries": [
+      { "item": "ID_1st" },
+      { "item": "zhigh_smart_phone" }
+    ]
+  }
+]
