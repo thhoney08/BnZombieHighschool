@@ -678,6 +678,39 @@
         "type": "sound_effect",
         "id" : "fire_gun",
         "volume" : 100,
+        "variant" : "shotgun_pump_paint",
+        "files" : [
+            "guns/others/bbgun_1.ogg",
+			"guns/others/bbgun_2.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun_distant",
+        "volume" : 40,
+        "variant" : "shotgun_pump_paint",
+        "files" : [
+            "guns/others/bbgun_1.ogg",
+			"guns/others/bbgun_2.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "reload",
+        "volume" : 90,
+        "variant" : "shotgun_pump_paint",
+        "files" : [
+            "guns/reload/shotgun/pumpreload1.ogg",
+			"guns/reload/shotgun/pumpreload2.ogg",
+			"guns/reload/shotgun/pumpreload3.ogg",
+			"guns/reload/shotgun/pumpreload4.ogg",
+			"guns/reload/shotgun/pumpreload5.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "fire_gun",
+        "volume" : 100,
         "variant" : "rock_launcher",
         "files" : [
             "guns/others/bbgun_1.ogg",
@@ -737,7 +770,111 @@
         "volume" : 100,
         "variant" : "bbM134",
         "files" : [
-            "guns/reload/others/hellsing.ogg"
+            "guns/reload/mg/mgk_1.ogg",
+			"guns/reload/mg/mgk_2.ogg",
+			"guns/reload/mg/mgk_3.ogg",
+			"guns/reload/mg/mgk_4.ogg",
+			"guns/reload/mg/mgk_5.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun",
+        "volume" : 80,
+        "variant" : "bullet_hand_crossbow",
+        "files" : [
+            "guns/crossbows/crossbows_1.ogg",
+			"guns/crossbows/crossbows_2.ogg",
+			"guns/crossbows/crossbows_3.ogg",
+			"guns/crossbows/crossbows_4.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun_distant",
+        "volume" : 40,
+        "variant" : "bullet_hand_crossbow",
+        "files" : [
+            "guns/crossbows/crossbows_1.ogg",
+			"guns/crossbows/crossbows_2.ogg",
+			"guns/crossbows/crossbows_3.ogg",
+			"guns/crossbows/crossbows_4.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "reload",
+        "volume" : 90,
+        "variant" : "bullet_hand_crossbow",
+        "files" : [
+            "guns/crossbows/reload_1.ogg",
+			"guns/crossbows/reload_2.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun",
+        "volume" : 120,
+        "variant" : "bolterZhigh",
+        "files" : [
+            "guns/454/454.ogg",
+            "guns/500/500.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun_distant",
+        "volume" : 60,
+        "variant" : "bolterZhigh",
+        "files" : [
+            "guns/454/454.ogg",
+            "guns/500/500.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "reload",
+        "volume" : 90,
+        "variant" : "bolterZhigh",
+        "files" : [
+            "guns/reload/mg/mgk_1.ogg",
+			"guns/reload/mg/mgk_2.ogg",
+			"guns/reload/mg/mgk_3.ogg",
+			"guns/reload/mg/mgk_4.ogg",
+			"guns/reload/mg/mgk_5.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun",
+        "volume" : 120,
+        "variant" : "boltPistolZhigh",
+        "files" : [
+            "guns/454/454.ogg",
+            "guns/500/500.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun_distant",
+        "volume" : 60,
+        "variant" : "boltPistolZhigh",
+        "files" : [
+            "guns/454/454.ogg",
+            "guns/500/500.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "reload",
+        "volume" : 90,
+        "variant" : "boltPistolZhigh",
+        "files" : [
+            "guns/reload/mg/mgk_1.ogg",
+			"guns/reload/mg/mgk_2.ogg",
+			"guns/reload/mg/mgk_3.ogg",
+			"guns/reload/mg/mgk_4.ogg",
+			"guns/reload/mg/mgk_5.ogg"
         ]
     },
     {
@@ -765,6 +902,35 @@
         "id" : "reload",
         "volume" : 90,
         "variant" : "bbM4",
+        "files" : [
+            "guns/reload/others/bbgun.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "fire_gun",
+        "volume" : 100,
+        "variant" : "bbmachinepistol",
+        "files" : [
+            "guns/others/bbgun_1.ogg",
+			"guns/others/bbgun_2.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun_distant",
+        "volume" : 40,
+        "variant" : "bbmachinepistol",
+        "files" : [
+            "guns/others/bbgun_1.ogg",
+			"guns/others/bbgun_2.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "reload",
+        "volume" : 90,
+        "variant" : "bbmachinepistol",
         "files" : [
             "guns/reload/others/bbgun.ogg"
         ]
@@ -830,6 +996,45 @@
         "type": "sound_effect",
         "id" : "fire_gun",
         "volume" : 100,
+        "variant" : "samEdge",
+        "files" : [
+            "guns/9mm/9mm_1.ogg",
+			"guns/9mm/9mm_2.ogg",
+			"guns/9mm/9mm_3.ogg",
+			"guns/9mm/9mm_4.ogg",
+			"guns/9mm/9mm_5.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun_distant",
+        "volume" : 60,
+        "variant" : "samEdge",
+        "files" : [
+            "guns/9mm/9mm_1.ogg",
+			"guns/9mm/9mm_2.ogg",
+			"guns/9mm/9mm_3.ogg",
+			"guns/9mm/9mm_4.ogg",
+			"guns/9mm/9mm_5.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "reload",
+        "volume" : 90,
+        "variant" : "samEdge",
+        "files" : [
+            "guns/reload/pistol_l/pistol_1.ogg",
+			"guns/reload/pistol_l/pistol_2.ogg",
+			"guns/reload/pistol_l/pistol_3.ogg",
+			"guns/reload/pistol_l/pistol_4.ogg",
+			"guns/reload/pistol_l/pistol_5.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "fire_gun",
+        "volume" : 100,
         "variant" : "bbsmg",
         "files" : [
             "guns/others/bbgun_1.ogg",
@@ -853,6 +1058,184 @@
         "variant" : "bbsmg",
         "files" : [
             "guns/reload/others/bbgun.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "fire_gun",
+        "volume" : 100,
+        "variant" : "penGun",
+        "files" : [
+            "guns/others/bbgun_1.ogg",
+			"guns/others/bbgun_2.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun_distant",
+        "volume" : 40,
+        "variant" : "penGun",
+        "files" : [
+            "guns/others/bbgun_1.ogg",
+			"guns/others/bbgun_2.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "reload",
+        "volume" : 90,
+        "variant" : "penGun",
+        "files" : [
+            "guns/reload/others/bbgun.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "fire_gun",
+        "volume" : 100,
+        "variant" : "penFlame",
+        "files" : [
+            "guns/flammable/flammable_1.ogg",
+			"guns/flammable/flammable_2.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun_distant",
+        "volume" : 40,
+        "variant" : "penFlame",
+        "files" : [
+            "guns/flammable/flammable_1.ogg",
+			"guns/flammable/flammable_2.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "reload",
+        "volume" : 90,
+        "variant" : "penFlame",
+        "files" : [
+            "guns/reload/flammable/flammable_1.ogg",
+			"guns/reload/flammable/flammable_2.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun",
+        "volume" : 90,
+        "variant" : "microwave_rifle",
+        "files" : [
+             "guns/eweapons/plasma_gun.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun_distant",
+        "volume" : 60,
+        "variant" : "microwave_rifle",
+        "files" : [
+             "guns/eweapons/plasma_gun.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "reload",
+        "volume" : 90,
+        "variant" : "microwave_rifle",
+        "files" : [
+            "guns/reload/eweapons/plasma_gun.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun",
+        "volume" : 90,
+        "variant" : "laser_musket",
+        "files" : [
+            "guns/eweapons/laser_rifle_1.ogg",
+			"guns/eweapons/laser_rifle_2.ogg",
+			"guns/eweapons/laser_rifle_3.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun_distant",
+        "volume" : 60,
+        "variant" : "laser_musket",
+        "files" : [
+            "guns/eweapons/laser_rifle_1.ogg",
+			"guns/eweapons/laser_rifle_2.ogg",
+			"guns/eweapons/laser_rifle_3.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "reload",
+        "volume" : 90,
+        "variant" : "laser_musket",
+        "files" : [
+            "guns/reload/eweapons/plasma_gun.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun",
+        "volume" : 90,
+        "variant" : "laser_musket_crank",
+        "files" : [
+            "guns/eweapons/laser_rifle_1.ogg",
+			"guns/eweapons/laser_rifle_2.ogg",
+			"guns/eweapons/laser_rifle_3.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun_distant",
+        "volume" : 60,
+        "variant" : "laser_musket_crank",
+        "files" : [
+            "guns/eweapons/laser_rifle_1.ogg",
+			"guns/eweapons/laser_rifle_2.ogg",
+			"guns/eweapons/laser_rifle_3.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "reload",
+        "volume" : 90,
+        "variant" : "laser_musket_crank",
+        "files" : [
+            "guns/reload/eweapons/plasma_gun.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "fire_gun",
+        "volume" : 100,
+        "variant" : "penChem",
+        "files" : [
+            "guns/flammable/flammable_1.ogg",
+			"guns/flammable/flammable_2.ogg"
+        ]
+    },
+	{
+        "type": "sound_effect",
+        "id" : "fire_gun_distant",
+        "volume" : 40,
+        "variant" : "penChem",
+        "files" : [
+            "guns/flammable/flammable_1.ogg",
+			"guns/flammable/flammable_2.ogg"
+        ]
+    },
+    {
+        "type": "sound_effect",
+        "id" : "reload",
+        "volume" : 90,
+        "variant" : "penChem",
+        "files" : [
+            "guns/reload/flammable/flammable_1.ogg",
+			"guns/reload/flammable/flammable_2.ogg"
         ]
     }
 ]

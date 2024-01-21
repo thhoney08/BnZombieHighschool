@@ -22,7 +22,9 @@
           { "id": "overlay_worn_queen_wig", "fg": 2 },
           { "id": "overlay_worn_snow_suit_head", "fg": 3 },
           { "id": "overlay_worn_hat_sailor", "fg": 4 },
-          { "id": "overlay_worn_badge_plant", "fg": 5 }
+          { "id": "overlay_worn_badge_plant", "fg": 5 },
+          { "id": "overlay_worn_hat_witch_purp", "fg": 6 },
+          { "id": "overlay_worn_hat_witch_black", "fg": 7 }
         ],
         "//": "range 1 to 128",
         "sprite_width": 32,

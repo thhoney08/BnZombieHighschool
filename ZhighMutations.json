@@ -1,8 +1,4 @@
 [
-   {
-    "type": "mutation_type",
-    "id": "eye_color"
-  },
   {
     "id": "hair_mj_roll",
     "type": "mutation",
@@ -183,6 +179,19 @@
     "purifiable": false,
     "player_display": false,
     "flags": [ "hair_brown", "hair_ponytail" ],
+    "types": [ "hair_style" ]
+  },
+  {
+    "id": "hair_medic",
+    "type": "mutation",
+    "name": { "str": "Hair: blond, long braided" },
+    "description": "Long braided blond hair style.",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "flags": [ "hair_blond", "hair_long" ],
     "types": [ "hair_style" ]
   },
   {
@@ -498,9 +507,87 @@
     "types": [ "hair_style" ]
   },
   {
+    "id": "hair_light_pink_crewcut",
+    "type": "mutation",
+    "name": { "str": "Hair: light pink, crew-cut" },
+    "description": "Crewcut light pink hair style.",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "flags": [ "hair_green", "hair_crewcut" ],
+    "types": [ "hair_style" ]
+  },
+  {
+    "id": "hair_light_pink_mohawk",
+    "type": "mutation",
+    "name": { "str": "Hair: light pink, mohawk" },
+    "description": "Mohawk light pink hair style.",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "flags": [ "hair_light_pink", "hair_mohawk" ],
+    "types": [ "hair_style" ]
+  },
+  {
+    "id": "hair_light_pink_fro",
+    "type": "mutation",
+    "name": { "str": "Hair: light pink, 'fro" },
+    "description": "'Fro light pink hair style.",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "flags": [ "hair_light_pink", "hair_fro" ],
+    "types": [ "hair_style" ]
+  },
+  {
+    "id": "hair_light_pink_short",
+    "type": "mutation",
+    "name": { "str": "Hair: light pink, short" },
+    "description": "Short light pink hair style",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "flags": [ "hair_light_pink", "hair_short" ],
+    "types": [ "hair_style" ]
+  },
+  {
+    "id": "hair_light_pink_medium",
+    "type": "mutation",
+    "name": { "str": "Hair: light pink, medium-length" },
+    "description": "Medium-length light pink hair style.",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "flags": [ "hair_light_pink", "hair_medium" ],
+    "types": [ "hair_style" ]
+  },
+  {
+    "id": "hair_light_pink_long",
+    "type": "mutation",
+    "name": { "str": "Hair: light pink, long" },
+    "description": "Long light pink hair style.",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "flags": [ "hair_light_pink", "hair_long" ],
+    "types": [ "hair_style" ]
+  },
+  {
     "id": "eye_red",
     "type": "mutation",
-    "name": { "str": "eye: red" },
+    "name": { "str": "Eye color: red" },
     "description": "Pair of red eyes.",
     "points": 0,
     "starting_trait": true,
@@ -512,20 +599,8 @@
   {
     "id": "eye_black",
     "type": "mutation",
-    "name": { "str": "eye: black" },
+    "name": { "str": "Eye color: black" },
     "description": "Pair of black eyes.",
-    "points": 0,
-    "starting_trait": true,
-    "valid": false,
-    "purifiable": false,
-    "player_display": false,
-    "types": [ "eye_color" ]
-  },
-  {
-    "id": "eye_grey",
-    "type": "mutation",
-    "name": { "str": "eye: grey" },
-    "description": "Pair of grey eyes.",
     "points": 0,
     "starting_trait": true,
     "valid": false,
@@ -536,7 +611,7 @@
   {
     "id": "eye_yellow",
     "type": "mutation",
-    "name": { "str": "eye: yellow" },
+    "name": { "str": "Eye color: yellow" },
     "description": "Pair of yellow eyes.",
     "points": 0,
     "starting_trait": true,
@@ -548,7 +623,7 @@
   {
     "id": "eye_purple",
     "type": "mutation",
-    "name": { "str": "eye: purple" },
+    "name": { "str": "Eye color: purple" },
     "description": "Pair of purple eyes.",
     "points": 0,
     "starting_trait": true,
@@ -560,7 +635,7 @@
   {
     "id": "eye_mint",
     "type": "mutation",
-    "name": { "str": "eye: mint" },
+    "name": { "str": "Eye color: mint" },
     "description": "Pair of mint eyes.",
     "points": 0,
     "starting_trait": true,
@@ -572,7 +647,7 @@
   {
     "id": "eye_pink",
     "type": "mutation",
-    "name": { "str": "eye: pink" },
+    "name": { "str": "Eye color: pink" },
     "description": "Pair of pink eyes.",
     "points": 0,
     "starting_trait": true,
@@ -584,20 +659,8 @@
   {
     "id": "eye_orange",
     "type": "mutation",
-    "name": { "str": "eye: orange" },
+    "name": { "str": "Eye color: orange" },
     "description": "Pair of orange eyes.",
-    "points": 0,
-    "starting_trait": true,
-    "valid": false,
-    "purifiable": false,
-    "player_display": false,
-    "types": [ "eye_color" ]
-  },
-  {
-    "id": "eye_green",
-    "type": "mutation",
-    "name": { "str": "eye: green" },
-    "description": "Pair of green eyes.",
     "points": 0,
     "starting_trait": true,
     "valid": false,
@@ -608,7 +671,7 @@
   {
     "id": "eye_purp_V2",
     "type": "mutation",
-    "name": { "str": "eye: purple and blue" },
+    "name": { "str": "Eye color: purple and blue" },
     "description": "Pair of purple and blue eyes.",
     "points": 0,
     "starting_trait": true,
@@ -620,7 +683,7 @@
   {
     "id": "eye_cyan",
     "type": "mutation",
-    "name": { "str": "eye: cyan" },
+    "name": { "str": "Eye color: cyan" },
     "description": "Pair of cyan eyes.",
     "points": 0,
     "starting_trait": true,
@@ -628,5 +691,31 @@
     "purifiable": false,
     "player_display": false,
     "types": [ "eye_color" ]
+  },
+  {
+    "type": "mutation",
+    "id": "PROF_SW",
+    "name": { "str": "School Hall Monitor" },
+    "points": 0,
+    "description": "You are a duly sworn School Hall Monitor, protecting orders from chaos (such as loitering).",
+    "valid": false,
+    "purifiable": false,
+    "profession": true
+  },
+  {
+    "type": "mutation",
+    "id": "REGEN_zhigh",
+    "name": { "str": "Weirdly healthy" },
+    "points": 6,
+    "purifiable": false,
+    "description": "You are healthy, due to some weird reason.",
+    "types": [ "HEALING", "RUNNING" ],
+    "stamina_regen_modifier": 2.0,
+    "healing_awake": 6.0,
+    "healing_resting": 4.5,
+    "mending_modifier": 6.0,
+    "fatigue_modifier": -2.0,
+    "fatigue_regen_modifier": 1.0,
+    "max_stamina_modifier": 0.55
   }
 ]

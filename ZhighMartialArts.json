@@ -2,6 +2,7 @@
   {
     "id": "manual_mcmap",
     "copy-from": "book_martial",
+    "looks_like": "manual_taekwondo",
     "type": "GENERIC",
     "name": { "str_sp": "Marine Corps Martial Arts Program Training Manual" },
     "price_postapoc": 2000,

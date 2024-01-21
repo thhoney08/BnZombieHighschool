@@ -15,6 +15,11 @@
     "type": "mutation_flag"
   },
   {
+    "id": "hair_light_pink",
+    "//": "This trait flag is used by cosmetic trait JSON, with no hardcode usage at present.",
+    "type": "mutation_flag"
+  },
+  {
     "id": "hair_orange",
     "//": "This trait flag is used by cosmetic trait JSON, with no hardcode usage at present.",
     "type": "mutation_flag"

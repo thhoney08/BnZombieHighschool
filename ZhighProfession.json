@@ -14,6 +14,15 @@
   {
     "type": "item_group",
     "subtype": "collection",
+    "id": "golfbag_AggressorZhigh",
+    "entries": [ { "item": "Rc_Packed" },
+                 { "item": "Rc_Packed" },
+                 { "item": "Rc_Packed" },
+                 { "item": "Rc_Packed" } ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "collection",
     "id": "quiver_DeadeyeZhigh",
     "entries": [ { "item": "arrow_wood", "charges": 20 } ]
   },
@@ -22,16 +31,6 @@
     "subtype": "collection",
     "id": "charged_noiseEmitter",
     "entries": [ { "item": "light_disposable_cell", "ammo-item": "battery", "charges": 300, "container-item": "noise_emitter" } ]
-  },
-  {
-    "type": "mutation",
-    "id": "PROF_SW",
-    "name": { "str": "School Hall Monitor" },
-    "points": 0,
-    "description": "You are a duly sworn School Hall Monitor, protecting orders from chaos (such as loitering).",
-    "valid": false,
-    "purifiable": false,
-    "profession": true
   },
   {
     "type": "scenario",
@@ -105,7 +104,8 @@
       "zhighGang",
       "zhighSvictim",
       "zhighSniper",
-      "zhighShotgunner",
+      "zhighShotgunnerDbb",
+      "zhighShotgunnerPac",
       "zhighScienceClubMem",
       "zhighDodgeballPlayer",
       "zhighJdelinquent",
@@ -120,9 +120,20 @@
       "zhighSecurity",
       "zhighPyromaniac",
       "zhighAdventurer",
+      "zhighDiver",
+      "zhighFencer",
+      "zhighHevGunner",
+      "zhighMascot",
+      "zhighRider",
+      "zhighAgressor",
+      "zhighAgent",
+      "zhighstudent_with_books",
       "zhighBlackbeltNovice",
       "zhighBlackbeltIntermediate",
       "zhighBlackbelt",
+      "zhighTrooper",
+      "zhighDmr",
+      "zhighPaintbPlayer",
       "zhighFrat"
     ],
     "start_name": "Zombiefied Highschool",
@@ -144,7 +155,7 @@
       "ANTLERS", "WINGS_BIRD", "WINGS_INSECT",
       "WINGS_BAT", "SMALL", "LARGE"
     ],
-    "flags": [ "CITY_START" ]
+    "flags": [ "CITY_START", "LONE_START" ]
   },
   {
     "type": "profession",
@@ -152,12 +163,13 @@
     "name": "Student",
     "description": "Some would say that there's nothing particularly notable about you. But you've survived, and that's more than most could say right now.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers",
@@ -167,8 +179,8 @@
           "wristwatch"
         ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -178,7 +190,7 @@
     "name": "Student - Chairman",
     "description": "When this disaster happened, you grabbed the best weapon - a chair - and started to fight. How long will you survive, in this wave of chaos?",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [
       { "level": 2, "name": "melee" },
       { "level": 2, "name": "bashing" }
@@ -188,6 +200,7 @@
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers",
@@ -195,8 +208,8 @@
         ],
         "entries": [ { "item": "camp_chair_zhigh", "custom-flags": [ "auto_wield" ] } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -207,17 +220,18 @@
     "description": "Before the world ended, you had a kind heart and loved to help other people, both in speaking and healing. Now that the world has gone to ashes, you need to survive using your skills.",
     "points": -2,
     "skills": [ { "level": 2, "name": "firstaid" } ],
-    "traits": [ "GOODCARDIO2", "REGEN", "PROF_MED" ],
+    "traits": [ "REGEN_zhigh", "PROF_MED" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers",
           "gloves_medical",
-          "medikitRecharge",
+          "medkitRecharge",
           "medium_atomic_battery_cell",
           "scalpel",
           "syringe",
@@ -231,8 +245,8 @@
           "wristwatch"
         ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -242,7 +256,7 @@
     "name": "Student - Fireman",
     "description": "Some teachers would say that you were a bad student. You always skipped class, and slept when you did not. But still, you did survived with your thick coat and a modified fire extinguisher.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [
       { "level": 1, "name": "melee" },
       { "level": 1, "name": "bashing" },
@@ -272,7 +286,7 @@
     "name": "Student - Archer",
     "description": "There is nothing better than a bolt pierced through an undead's head. However, you should also know that they can pierce your head too.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [
       { "level": 2, "name": "pistol" },
       { "level": 2, "name": "gun" }
@@ -304,12 +318,13 @@
     "description": "You always liked to paint, and it was your dream job to become an artist. What painting will you draw, in this canvas which is called the world?",
     "points": -2,
     "skills": [ { "level": 2, "name": "barter" } ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "mbag",
@@ -319,8 +334,8 @@
           "wristwatch"
         ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -330,7 +345,7 @@
     "name": "Student - Bomber",
     "description": "You love sweets! As the world ended, you made your own explosive using snacks and soft drinks.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -359,7 +374,7 @@
     "description": "You were hell on wheels prior to the apocalypse. Now the rest of your team is dead, and you probably wouldn't have lived this long if not for your penchant for high-speed violence. Things are looking grim; how long can you race laps around the undead before you get blocked for good?",
     "points": -1,
     "skills": [ { "level": 1, "name": "melee" }, { "level": 1, "name": "unarmed" }, { "level": 1, "name": "dodge" } ],
-    "traits": [ "PROF_SKATER", "GOODCARDIO2", "REGEN" ],
+    "traits": [ "PROF_SKATER", "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -389,7 +404,7 @@
       { "level": 2, "name": "dodge" },
       { "level": 1, "name": "bashing" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN", "PROF_CHURL" ],
+    "traits": [ "REGEN_zhigh", "PROF_CHURL" ],
     "items": {
       "both": {
         "items": [
@@ -423,7 +438,7 @@
       { "level": 2, "name": "dodge" },
       { "level": 1, "name": "bashing" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN", "PROF_CHURL" ],
+    "traits": [ "REGEN_zhigh", "PROF_CHURL" ],
     "items": {
       "both": {
         "items": [
@@ -456,7 +471,7 @@
       { "level": 2, "name": "barter" },
       { "level": 2, "name": "pistol" },
       { "level": 2, "name": "gun" } ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -488,7 +503,7 @@
       { "level": 2, "name": "melee" },
       { "level": 2, "name": "bashing" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -501,7 +516,7 @@
           "gloves_wraps",
           "wristwatch"
         ],
-        "entries": [ { "item": "sword_crude", "custom-flags": [ "auto_wield" ] } ]
+        "entries": [ { "item": "bat_metal", "custom-flags": [ "auto_wield" ] } ]
       },
       "male": [ "boxer_shorts", "pants_zhigh" ],
       "female": [ "bra", "panties", "skirt_zhigh" ]
@@ -518,12 +533,13 @@
       { "level": 3, "name": "gun" },
       { "level": 5, "name": "archery" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers",
@@ -533,8 +549,8 @@
         ],
         "entries": [ { "item": "compositebow", "custom-flags": [ "auto_wield" ], "contents-item": [ "bow_scope", "bow_stabilizer_set" ] }, { "item": "quiver", "contents-group": "quiver_RangerZhigh" } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -548,12 +564,13 @@
       { "level": 1, "name": "melee" },
       { "level": 1, "name": "bashing" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers"
@@ -562,8 +579,8 @@
           { "item": "vodka", "container-item": "flask_hip" },
           { "item": "acoustic_guitar", "custom-flags": [ "auto_wield" ] } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ],
     "addictions": [ { "intensity": 5, "type": "alcohol" } ]
@@ -580,12 +597,13 @@
       { "level": 1, "name": "rifle" },
       { "level": 1, "name": "pistol" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN", "SQUEAMISH" ],
+    "traits": [ "REGEN_zhigh", "SQUEAMISH" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers",
@@ -596,8 +614,8 @@
           { "item": "ammo_cash", "charges": 140 },
           { "item": "cash_blaster", "ammo-item": "ammo_cash", "charges": 67, "custom-flags": [ "auto_wield" ] } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -608,7 +626,7 @@
     "description": "You were preparing for an idol contest, had the skills, the looks, and the attitudes. The contest was going to happen tomorrow and this apocalypse canceled it. Forever.",
     "points": -2,
     "skills": [ { "level": 1, "name": "melee" }, { "level": 2, "name": "dodge" } ],
-    "traits": [ "STYLISH", "GOODCARDIO2", "REGEN" ],
+    "traits": [ "STYLISH", "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -631,14 +649,14 @@
     "type": "profession",
     "id": "zhighTrapper",
     "name": "Student - Trapper",
-    "description": "You had the school lunch lady type of job in school. The job sucked, plus no one heard your whining about rats, so you tried to thake the matters in your hands. Now that the world has ended, the thing that you now have are some traps which you were going to catch some mice.",
+    "description": "You had the school lunch lady type of job in school. The job sucked, plus no one heard your whining about rats, so you tried to take the matters in your hands. Now that the world has ended, the thing that you now have are some traps which you were going to catch some mice.",
     "points": -2,
     "skills": [
       { "level": 1, "name": "firstaid" },
       { "level": 1, "name": "mechanics" },
       { "level": 1, "name": "traps" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -671,12 +689,13 @@
     "description": "As the school hall monitor, you belived in your leadership. It will make your job easier while leading people, but against zombies... Guess you need another method.",
     "points": -2,
     "skills": [ { "level": 1, "name": "melee" }, { "level": 3, "name": "barter" } ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh", "PROF_SW" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers",
@@ -686,8 +705,8 @@
           "wristwatch"
         ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -697,7 +716,7 @@
     "name": "Student - Magician",
     "description": "With tricks and magic, you could survive this whole disaster. Or not. At least you got some cards to throw at your enemies.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -731,7 +750,7 @@
     "description": "You've always loved frogs and rain! Too bad both of them are far from safe now.",
     "points": -2,
     "skills": [ { "level": 1, "name": "melee" }, { "level": 1, "name": "bashing" } ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -745,8 +764,8 @@
         ],
         "entries": [ { "item": "frog_umbrella_close", "custom-flags": [ "auto_wield" ] } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -756,7 +775,7 @@
     "name": "Student - Shooter",
     "description": "As a basketball player, it was going to be your first major game, but then the Cataclysm struck. Thanks to your quick feet, you were among the lucky few to survive and escape from the creatures.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [ { "level": 2, "name": "dodge" }, { "level": 3, "name": "throw" } ],
     "items": {
       "both": { "items": [ "tank_top", "jersey", "b_shorts", "zhigh_smart_phone", "socks_ankle", "sneakers", "sports_drink" ] },
@@ -799,7 +818,7 @@
       { "level": 1, "name": "stabbing" },
       { "level": 1, "name": "unarmed" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -822,7 +841,7 @@
     "skills": [
       { "level": 2, "name": "throw" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -850,7 +869,7 @@
     "name": { "male": "Student - Hunter", "female": "Student - Huntress" },
     "description": "As you were preparing for your next school play, an outbreak happened and you had to escape. Too bad you could not perform the show, but at least the show called your life got a new chapter to begin.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -875,7 +894,7 @@
     "name": "Student - Spotlight",
     "description": "As you were preparing for your next school play, an outbreak happened and you had to escape with a modified spotlight as a weapon. Too bad you could not perform the show, but at least the show called your life got a new chapter to begin.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -901,7 +920,7 @@
     "skills": [
       { "level": 3, "name": "swimming" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -929,7 +948,7 @@
       { "level": 1, "name": "melee" },
       { "level": 1, "name": "bashing" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -958,7 +977,7 @@
       { "level": 2, "name": "barter" },
       { "level": 1, "name": "throw" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -991,7 +1010,7 @@
       { "level": 1, "name": "melee" },
       { "level": 1, "name": "bashing" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -1001,8 +1020,8 @@
           "sneakers",
           "jacket_light",
           "mbag",
-          "medikit1",
-          "medikit1",
+          "medkit1",
+          "medkit1",
           "matches",
           "wristwatch"
         ],
@@ -1019,7 +1038,7 @@
     "name": "Student - Boxer",
     "description": "You were training for the fight of your life before the Cataclysm struck. Now you fight just to keep yourself alive.",
     "points": 2,
-    "traits": [ "PROF_BOXER", "GOODCARDIO2", "REGEN" ],
+    "traits": [ "PROF_BOXER", "REGEN_zhigh" ],
     "skills": [ { "level": 2, "name": "melee" }, { "level": 2, "name": "unarmed" }, { "level": 2, "name": "dodge" } ],
     "items": {
       "both": {
@@ -1048,9 +1067,9 @@
     "description": "You were that kind of sportsman who couldn't get off the track. You love running, and you enhanced your body to do it even better. Now there is plenty to run from, but this is your kind of game.",
     "points": -2,
     "skills": [ { "level": 3, "name": "dodge" } ],
-    "traits": [ "GOODCARDIO2", "REGEN", "PARKOUR" ],
+    "traits": [ "REGEN_zhigh", "PARKOUR" ],
     "items": {
-      "both": { "items": [ "tshirt", "jacket_light", "water_mineral", "medikit1", "medikit1", "shorts_tracksuit_zhigh", "zhigh_smart_phone", "socks_ankle", "sneakers", "runner_bag", "wristwatch" ] },
+      "both": { "items": [ "tshirt", "jacket_light", "water_mineral", "medkit1", "medkit1", "shorts_tracksuit_zhigh", "zhigh_smart_phone", "socks_ankle", "sneakers", "runner_bag", "wristwatch" ] },
       "male": [ "briefs" ],
       "female": [ "sports_bra", "boy_shorts" ]
     },
@@ -1066,7 +1085,7 @@
       { "level": 3, "name": "melee" },
       { "level": 3, "name": "bashing" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -1092,7 +1111,7 @@
       { "level": 1, "name": "melee" },
       { "level": 2, "name": "unarmed" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -1118,7 +1137,7 @@
       { "level": 1, "name": "melee" },
       { "level": 1, "name": "bashing" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -1133,7 +1152,7 @@
         "entries": [ { "item": "mop", "custom-flags": [ "auto_wield" ] } ]
       },
       "male": [ "boxer_shorts", "pants_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -1143,7 +1162,7 @@
     "name": "Student - Shutter",
     "description": "You always liked to take pictures, wether it was a picture of a human or a landscape. Guess you got another category in your album, if you do survive this.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -1192,7 +1211,7 @@
   {
     "type": "profession",
     "id": "zhighSmoker",
-    "name": "zhighTeacher - Smoker",
+    "name": "Teacher - Smoker",
     "description": "You've been teaching kids for some years of your life, and they've mostly listened to your teachings. However, the dead won't write out lines for eating you alive. How did you got some smoke bombs, you do not know.",
     "points": -1,
     "skills": [ { "level": 1, "name": "throw" }, { "level": 2, "name": "speech" } ],
@@ -1223,7 +1242,7 @@
     "description": "As a student and a semi-libarian, you always loved books. Will your knowledge be useful, when the whole world is doomed?",
     "points": -2,
     "skills": [ { "level": 2, "name": "dodge" } ],
-    "traits": [ "LOVES_BOOKS", "GOODCARDIO2", "REGEN" ],
+    "traits": [ "LOVES_BOOKS", "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -1237,8 +1256,8 @@
         ],
         "entries": [ { "item": "guidebook", "custom-flags": [ "auto_wield" ] } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -1249,12 +1268,13 @@
     "description": "The school garden was almost your area. The world has ended, but who cares - you still can make your own garden, much bigger than the one you had before.",
     "points": -2,
     "skills": [ { "level": 2, "name": "fabrication" } ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "apron_green",
           "zhigh_smart_phone",
           "socks",
@@ -1276,7 +1296,7 @@
     "name": "Student - Lancer",
     "description": "As the leader of a marching band, you swung your swagger stick to give your members a good beat. As there are no bands for you to lead, you could only swing the stick in order to protect yourself.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -1306,7 +1326,7 @@
       { "level": 1, "name": "cutting" },
       { "level": 1, "name": "dodge" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -1336,7 +1356,7 @@
       { "level": 1, "name": "dodge" },
       { "level": 3, "name": "throw" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -1347,7 +1367,11 @@
           "sneakers",
           "BBallglove",
           "pants_tracksuit_zhigh",
-          "wristwatch"
+          "wristwatch",
+          "sling_rubberball",
+          "sling_rubberball",
+          "sling_rubberball",
+          "sling_rubberball"
         ]
       },
       "male": [ "briefs" ],
@@ -1365,7 +1389,7 @@
     "skills": [ 
       { "level": 1, "name": "firstaid" }, 
       { "level": 1, "name": "survival" } ],
-    "traits": [ "ANIMALEMPATH", "GOODCARDIO2", "REGEN" ],
+    "traits": [ "ANIMALEMPATH", "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -1391,14 +1415,14 @@
   {
     "type": "profession",
     "id": "zhighDrFrog",
-    "name": "zhighTeacher - Cryomancer",
+    "name": "Teacher - Cryomancer",
     "description": "By the studies that you took back in university, you could make some freeze guns and grenades. You cannot kill them directly, but these are still better than nothing!",
     "points": -2,
     "skills": [ 
       { "level": 1, "name": "throw" }, 
       { "level": 1, "name": "gun" }, 
       { "level": 1, "name": "pistol" } ],
-    "traits": [ "GOODCARDIO2", "REGEN", "BEAK_PECK", "FLEET2", "GIZZARD", "WINGS_BIRD", "DEX_UP_3", "FEATHERS" ],
+    "traits": [ "REGEN_zhigh", "BEAK_PECK", "FLEET2", "GIZZARD", "WINGS_BIRD", "DEX_UP_3", "FEATHERS" ],
     "items": {
       "both": {
         "items": [
@@ -1428,7 +1452,7 @@
     "points": -2,
     "skills": [ 
       { "level": 1, "name": "dodge" } ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -1457,11 +1481,12 @@
       { "level": 1, "name": "melee" },
       { "level": 1, "name": "bashing" }
     ],
-    "traits": [ "STYLISH", "GOODCARDIO2", "REGEN" ],
+    "traits": [ "STYLISH", "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
+          "webbing_belt",
           "peacoat",
           "zhigh_smart_phone",
           "socks",
@@ -1483,11 +1508,12 @@
     "name": "Student - Animator",
     "description": "You did not lose your hope about drawimg comics, even after the apocalypse happened. Unfortunately, hope does not emsure your life.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
+          "webbing_belt",
           "runner_bag",
           "zhigh_smart_phone",
           "socks",
@@ -1516,7 +1542,7 @@
       { "level": 1, "name": "swimming" },
       { "level": 1, "name": "gun" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
@@ -1544,12 +1570,13 @@
     "name": "Student - Outsider",
     "description": "You were the 'lone wolf' type of person. After the apocalypse, that did not changed at all. It just became worse, since the people around you are now going to eat you up. Hiding in a box sounds nice, just like the japanese game with lots of cardboard boxes.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers"
@@ -1557,8 +1584,8 @@
         "entries": [ 
           { "item": "boxsnake", "custom-flags": [ "auto_wield" ] } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -1569,12 +1596,13 @@
     "description": "You love parties! Unfortunately for you, a big event called the apocalypse ended the world that you lived in. Guess you have to party in a different way, or else, right?",
     "points": -2,
     "skills": [ { "level": 2, "name": "speech" }, { "level": 2, "name": "barter" } ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers",
@@ -1589,8 +1617,8 @@
           "balloon"
         ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -1601,12 +1629,13 @@
     "description": "You were the queen bee of the school - you always were the Master of Ceremonies, always made the show flow easliy like a river. Now, you have bigger problems than a guy falling down during a show.",
     "points": -2,
     "skills": [ { "level": 3, "name": "speech" }, { "level": 1, "name": "barter" } ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "cloak_mj",
@@ -1617,15 +1646,15 @@
         "entries": [ 
           { "item": "microphone_xlr_generic", "custom-flags": [ "auto_wield" ] } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
   {
     "type": "profession",
     "id": "zhighMaestro",
-    "name": "zhighTeacher - Maestro",
+    "name": "Teacher - Maestro",
     "description": "You've been teaching kids music for the whole of your life, and they've mostly listened to your teachings. However, the dead won't stop singing songs for eating you alive.",
     "points": -1,
     "skills": [ { "level": 3, "name": "speech" }, { "level": 3, "name": "barter" } ],
@@ -1654,12 +1683,13 @@
     "description": "As a half - rapper and a half - frisbee player, you grabbed the best weapon in your hand - a frisbee - and dived into the apocalypse. Some tunes in your pocket, weapon in your hand, and now you are ready to go.",
     "points": -2,
     "skills": [ { "level": 2, "name": "throw" }, { "level": 2, "name": "speech" } ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "mbag",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers",
@@ -1673,27 +1703,28 @@
         "entries": [ 
           { "item": "discShooter", "custom-flags": [ "auto_wield" ] } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
   {
     "type": "profession",
     "id": "zhighDeadeye",
-    "name": "Student - Marksman",
+    "name": "Student - Sharpshooter",
     "description": "Ever since you were a child you loved shooting bows, and you soon took a liking to the challenge of shooting with a bow. There was a person better than you, and winning that person was the only thing that you've cared about. The world ended? Who cares? You have your bow, your skills, and the will to win this disaster. Wait, that competitor should be dead now, right?",
     "points": -1,
     "skills": [
       { "level": 1, "name": "gun" },
       { "level": 3, "name": "archery" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers",
@@ -1701,8 +1732,8 @@
         ],
         "entries": [ { "item": "compositebow", "custom-flags": [ "auto_wield" ], "contents-item": [ "bow_scope", "bow_stabilizer_set" ] }, { "item": "quiver", "contents-group": "quiver_DeadeyeZhigh" } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -1713,12 +1744,13 @@
     "description": "You were hell on wheels prior to the apocalypse. Now the rest of your team is dead, and you probably wouldn't have lived this long if not for your penchant for high-speed violence. Things are looking grim; how long can you race laps around the undead before you get blocked for good?",
     "points": -1,
     "skills": [ { "level": 1, "name": "melee" }, { "level": 1, "name": "unarmed" }, { "level": 1, "name": "dodge" } ],
-    "traits": [ "PROF_SKATER", "GOODCARDIO2", "REGEN" ],
+    "traits": [ "PROF_SKATER", "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "socks",
           "shorts",
+          "webbing_belt",
           "gloves_fingerless",
           "hoodie",
           "wristwatch",
@@ -1737,23 +1769,24 @@
     "description": "When chaos came, you helped people by healing them. Unfortunately the undead overwhelmed, and you fled to a school that you were attending before.",
     "points": -2,
     "skills": [ { "level": 1, "name": "dodge" }, { "level": 1, "name": "firstaid" } ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
+          "webbing_belt",
           "hoodie",
           "zhigh_smart_phone",
           "socks",
           "sneakers",
-          "medikit3",
-          "medikit3",
+          "medkit3",
+          "medkit3",
           "XmasHat",
           "wristwatch"
         ]
       },
-      "male": [ "boxer_shorts" ],
-      "female": [ "bra", "panties" ]
+      "male": [ "boxer_shorts", "pants_zhigh" ],
+      "female": [ "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -1767,22 +1800,25 @@
         { "level": 1, "name": "speech" }, 
         { "level": 1, "name": "throw" }, 
         { "level": 1, "name": "bashing" } ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "sweatshirt",
           "zhigh_smart_phone",
+          "webbing_belt",
           "socks",
           "sneakers",
           "signal_flare",
           "signal_flare",
+          "signal_survivor_flare",
+          "signal_survivor_flare",
           "trenchcoat_leather",
           "wristwatch"
         ],
         "entries": [
           { "group": "charged_two_way_radio" },
-          { "item": "flaregun", "ammo-item": "signal_flare", "container-item": "holster", "charges": 1 }
+          { "item": "flaregun", "ammo-item": "signal_survivor_flare", "container-item": "holster", "charges": 1 }
         ]
       },
       "male": [ "boxer_shorts", "pants_zhigh" ],
@@ -1816,6 +1852,7 @@
       "both": {
         "items": [
           "dress_shirt",
+          "webbing_belt",
           "blazer",
           "pants",
           "socks",
@@ -1838,13 +1875,14 @@
     "name": "Student - Juvenile",
     "description": "You never cared for grown-ups telling you what to do, and that's how you ended up spending most of your days in the principal's office. Now, not needing grown-ups to tell you what to do is the only reason you're alive. Man, you really should've played hooky today.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [ { "level": 1, "name": "gun" }, { "level": 1, "name": "dodge" }, { "level": 1, "name": "melee" } ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone", "switchblade",
           "socks", "sneakers", "gloves_light_fingerless",
           "slingpack", "matches", "hairpin", "hairpin",
@@ -1852,8 +1890,8 @@
           "marble", "slingshot"
         ]
        },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -1863,13 +1901,14 @@
     "name": "Student - Survivalist",
     "description": "Your parents were crazy preppers who thought some \"Cataclysm\" was coming, and insisted on preparing you for it. Turns out they were right. You didn't get a chance to thank them. The only thing you can do for them now is what they always hoped you would do in the dark days ahead: survive.",
     "points": -1,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [ { "level": 1, "name": "survival" }, { "level": 1, "name": "fabrication" }, { "level": 1, "name": "firstaid" } ],
     "items": {
       "both": {
         "items": [
          "dress_shirt_zhigh",
          "blazer_zhigh",
+         "webbing_belt",
          "zhigh_smart_phone", 
          "socks", "boots", "knit_scarf", "backpack",
          "granola", "water_clean", "scissors",
@@ -1878,8 +1917,8 @@
         ],
         "entries": [ { "group": "charged_flashlight" } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -1889,19 +1928,20 @@
     "name": "Student - Cyborg",
     "description": "Your parents were so obsessed with making sure you aced every test that they had you outfitted with bionics to make you smarter and never forget anything. And now, you are facing the most dire test yet, and once again you had better succeed, or else.",
     "points": -1,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "CBMs": [ "bio_batteries", "bio_power_storage", "bio_int_enhancer", "bio_memory" ],
     "items": {
       "both": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks", "dress_shoes", "tieclip",
           "fancy_sunglasses", "knit_scarf", "wristwatch",
           "mbag", "water_mineral", "money_bundle"
       ],
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -1911,7 +1951,7 @@
     "name": "Student - Dodgeball Player",
     "description": "You liked to play dodgeball, where failing to dodge the ball meant you were out. Now failing to dodge threatens your life. Don't slip up.",
     "points": -1,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [ { "level": 1, "name": "dodge" }, { "level": 1, "name": "throw" } ],
     "items": {
       "both": { "items": [ "tshirt", "jacket_light", "zhigh_smart_phone", "jeans", "socks_ankle", "lowtops", "slingpack", "juice" ] },
@@ -1926,20 +1966,21 @@
     "name": "Student - Science Club Member",
     "description": "You were a member of the school science club, and right now you're as upset as you've ever been that the school wouldn't let you play with the really fun chemicals that make things go boom. At least now no one's around to tell you that you can't.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [ { "level": 1, "name": "cooking" }, { "level": 1, "name": "mechanics" } ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks", "sneakers", "knit_scarf", "backpack",
           "textbook_chemistry", "wristwatch"
         ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -1949,7 +1990,7 @@
     "name": "Student - Otaku",
     "description": "Late nights with friends watching anime and eating snacks has prepared you for the premier anime convention in the Northeast. It just had to be the day of the apocalypse. At least you were ready in case your costume tore.",
     "points": -1,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [ { "level": 1, "name": "tailor" } ],
     "items": {
       "both": {
@@ -1957,6 +1998,7 @@
           "socks",
           "sneakers",
           "sewing_kit",
+          "webbing_belt",
           "mbag",
           "fur_cat_ears",
           "fur_cat_tail",
@@ -1967,8 +2009,8 @@
           "cheeseburger"
         ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -1978,7 +2020,7 @@
     "name": "Student - Gunslinger (six shooter)",
     "description": "You always liked Wild West related stuff, impressing friends and others with your displays of marksmanship. But that world has ended, so you took your trusty 6-shooter flintlock and ready to shoot some ruffians with it.",
     "points": 2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [
       { "level": 2, "name": "gun" },
       { "level": 3, "name": "pistol" },
@@ -1991,6 +2033,7 @@
           "under_armor_shorts",
           "cowboy_hat",
           "socks",
+          "webbing_belt",
           "pants_zhigh",
           "chaps_leather",
           "gloves_leather",
@@ -2016,7 +2059,7 @@
     "name": "Student - Gunslinger (rider)",
     "description": "You always liked Wild West related stuff, impressing friends and others with your displays of marksmanship. But that world has ended, so you took your trusty flintlock pistol and ready to shoot some ruffians with it.",
     "points": 2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [
       { "level": 2, "name": "gun" },
       { "level": 3, "name": "pistol" },
@@ -2030,6 +2073,7 @@
           "under_armor_shorts",
           "cowboy_hat",
           "socks",
+          "webbing_belt",
           "pants_zhigh",
           "chaps_leather",
           "gloves_leather",
@@ -2058,7 +2102,7 @@
     "name": "Student - Slasher",
     "description": "You always liked slasher and zombie movies. As this event happened, you grab your mask and your weapon - a machete, and got ready to slash those zombies. Do you like hurting other zombies? Cause you should.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [
       { "level": 2, "name": "melee" },
       { "level": 2, "name": "cutting" }
@@ -2067,6 +2111,7 @@
       "both": {
         "items": [
           "tank_top",
+          "webbing_belt",
           "jacket_leather",
           "zhigh_smart_phone",
           "socks",
@@ -2089,7 +2134,7 @@
     "name": "Student - Slasher?",
     "description": "Kill. Rip. Burn. Tear.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "KILLER", "REGEN", "PROF_FERAL" ],
+    "traits": [ "KILLER", "REGEN_zhigh", "PROF_FERAL" ],
     "skills": [
       { "level": 2, "name": "melee" },
       { "level": 2, "name": "cutting" }
@@ -2098,6 +2143,7 @@
       "both": {
         "items": [
           "tank_top",
+          "webbing_belt",
           "jacket_leather",
           "zhigh_smart_phone",
           "socks",
@@ -2120,12 +2166,13 @@
     "name": "Student - Priest",
     "description": "Holy mother of god. Something - something bad happened, and you are chased by a group of undeads. You could meditate to a god, but this is another challance that the god gave you to face.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers",
@@ -2137,8 +2184,8 @@
         ],
         "entries": [ { "item": "candlestick", "custom-flags": [ "auto_wield" ] } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -2148,12 +2195,13 @@
     "name": "Student - Monk",
     "description": "Something - something bad happened, and you are chased by a group of undeads. You could meditate to a god, but this is another challance that the god gave you to face.",
     "points": 2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers",
@@ -2167,8 +2215,8 @@
         ],
         "entries": [ { "item": "q_staff", "custom-flags": [ "auto_wield" ] } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -2178,12 +2226,13 @@
     "name": "Student - Airsoft Player",
     "description": "People always looked down on your hobby, but you survived due to your training, and they did not. Time to go another round, which should not end soon.",
     "points": 0,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [ { "level": 2, "name": "gun" }, { "level": 2, "name": "rifle" }, { "level": 2, "name": "pistol" } ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
+          "webbing_belt",
           "modularvestceramic",
           "zhigh_smart_phone",
           "socks",
@@ -2200,8 +2249,8 @@
           { "item": "bbM4", "ammo-item": "bb", "charges": [ 1, 300 ], "contents-item": [ "shoulder_strap" ], "custom-flags": [ "auto_wield" ] }
         ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -2211,12 +2260,13 @@
     "name": "Student - Gangster",
     "description": "You always liked the classic Italian gangster movies - suit, ite, and a tommy gun. As you bought your fedora, the world ended and the zombies got loose. Well, time to do the hit-and-run thingy.",
     "points": 1,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [ { "level": 2, "name": "gun" }, { "level": 2, "name": "melee" }, { "level": 2, "name": "smg" }, { "level": 2, "name": "pistol" } ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
+          "webbing_belt",
           "trenchcoat",
           "zhigh_smart_phone",
           "socks",
@@ -2232,8 +2282,8 @@
           { "item": "bbsmg", "ammo-item": "bb", "charges": [ 1, 300 ], "contents-item": [ "shoulder_strap" ], "custom-flags": [ "auto_wield" ] }
         ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -2243,6 +2293,7 @@
     "name": "Student - Sleep Victim",
     "description": "What the goddam hell! You were in the middle of a nice sleep when the Cataclysm struck! You barely managed to escape with a bathrobe.",
     "points": -6,
+    "traits": [ "REGEN_zhigh" ],
     "items": { "both": { "items": [ "house_coat", "flip_flops_exp" ] } },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -2251,15 +2302,16 @@
     "id": "zhighSniper",
     "name": "Student - Sniper",
     "description": "You always liked to shoot guns. More likely, you liked to shoot guns accurately, and you were good at it. While you were playing a round shooting BBs, apocalypse happened and it turned your world 180 degrees. You are nothing like the sniper from a cool movie, but determined enough to survive in this damn hellhole.",
-    "points": -2,
+    "points": -1,
     "skills": [ { "level": 3, "name": "gun" }, { "level": 3, "name": "rifle" } ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "tacvest",
           "zhigh_smart_phone",
+          "webbing_belt",
           "socks",
           "sneakers",
           "gloves_tactical",
@@ -2291,12 +2343,13 @@
       { "level": 2, "name": "firstaid" },
       { "level": 2, "name": "rifle" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "sneakers",
@@ -2307,14 +2360,15 @@
           "trenchcoat",
           "survival_kit",
           "matches",
+          "nail",
           "molle_pack",
           "wristwatch"
         ],
         "entries": [
           { "item": "marble_gun", "ammo-item": "nail", "charges": 2, "contents-item": "shoulder_strap" } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -2340,7 +2394,7 @@
     "name": "Student - Novice Martial Artist",
     "description": "You were on your way to the dojo for your first lesson when the world ended. And you really wanted to learn how to swim, too.",
     "points": -1,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": [ "karate_gi", "judo_belt_white", "zhigh_smart_phone", "mouthpiece", "socks_ankle", "sneakers" ],
       "male": [ "boxer_shorts" ],
@@ -2354,7 +2408,7 @@
     "name": "Student - Martial Artist",
     "description": "'Drop the martial arts!', they said. 'Learn a skill for the REAL world!', they said. Well, you're about to show them!  SHOW THEM ALL!",
     "points": 1,
-    "traits": [ "PROF_MA_ORANGE", "GOODCARDIO2", "REGEN" ],
+    "traits": [ "PROF_MA_ORANGE", "REGEN_zhigh" ],
     "skills": [ { "level": 2, "name": "melee" }, { "level": 2, "name": "unarmed" }, { "level": 2, "name": "dodge" } ],
     "items": {
       "both": [ "karate_gi", "judo_belt_orange", "zhigh_smart_phone", "mouthpiece", "socks_ankle", "sneakers" ],
@@ -2369,7 +2423,7 @@
     "name": "Student - Blackbelt",
     "description": "As the world ends, you alone stand against the coming darkness with your fists of steel.",
     "points": 3,
-    "traits": [ "PROF_MA_BLACK", "GOODCARDIO2", "REGEN" ],
+    "traits": [ "PROF_MA_BLACK", "REGEN_zhigh" ],
     "skills": [ { "level": 8, "name": "melee" }, { "level": 8, "name": "unarmed" }, { "level": 8, "name": "dodge" } ],
     "items": {
       "both": [ "karate_gi", "judo_belt_black", "zhigh_smart_phone", "mouthpiece", "geta" ],
@@ -2384,7 +2438,7 @@
     "name": { "male": "Student - rich boy", "female": "Student - rich girl" },
     "description": "You were living the high life, spending your parents money without a care in the world. You were at one of your usual crazy parties when the guests became hungry for more than your drugs. You still have a chance to use the last symbol of your luxurious life - your sports car - and get far away.",
     "points": 1,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [ { "level": 1, "name": "speech" }, { "level": 2, "name": "driving" } ],
     "items": {
       "both": { "items": [ "gold_watch", "water_mineral", "zhigh_smart_phone", "money_bundle", "cig", "ref_lighter" ],
@@ -2400,7 +2454,7 @@
     "name": "Student - Burglar",
     "description": "You thought this would be your lucky break. Does it count as breaking and entering if everyone is undead?",
     "points": 1,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": [
         "socks",
@@ -2408,6 +2462,7 @@
         "pants_zhigh",
         "dress_shirt_zhigh",
         "gloves_light",
+        "webbing_belt",
         "balclava",
         "swag_bag",
         "crowbar",
@@ -2424,30 +2479,64 @@
   },
   {
     "type": "profession",
-    "id": "zhighShotgunner",
-    "name": "Student - Shotgunner",
+    "id": "zhighShotgunnerDbb",
+    "name": "Student - Shotgunner (double barrel)",
     "description": "Ever since you were a child you loved shooting, and you soon took a liking to the challenge of shooting with a shotgun. Why, if the world ended there's nothing you'd want at your side more than your trusty shotgun. So when it did, you made sure to bring it along.",
     "points": -1,
     "skills": [ { "level": 1, "name": "gun" }, { "level": 1, "name": "shotgun" } ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
+    "items": {
+      "both": {
+        "items": [
+          "dress_shirt_zhigh",
+          "doom_vest",
+          "webbing_belt",
+          "zhigh_smart_phone",
+          "socks",
+          "paintball",
+          "paintball_shot",
+          "paintball_shot",
+          "mbag",
+          "boots_steel",
+          "doom_fullhelmet"
+        ],
+        "entries": [
+          { "item": "shotgun_d_paint", "ammo-item": "paintball_shot", "charges": 2, "contents-item": "shoulder_strap", "custom-flags": [ "auto_wield" ] } ]
+      },
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
+    },
+    "flags": [ "SCEN_ONLY" ]
+  },
+  {
+    "type": "profession",
+    "id": "zhighShotgunnerPac",
+    "name": "Student - Shotgunner (pump action)",
+    "description": "Ever since you were a child you loved shooting, and you soon took a liking to the challenge of shooting with a shotgun. Why, if the world ended there's nothing you'd want at your side more than your trusty shotgun. So when it did, you made sure to bring it along.",
+    "points": -1,
+    "skills": [ { "level": 1, "name": "gun" }, { "level": 1, "name": "shotgun" } ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "blazer_zhigh",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "paintball",
           "paintball_shot",
+          "paintball_shot",
           "mbag",
           "boots_steel",
-          "wristwatch"
+          "balclava",
+          "glasses_bal"
         ],
         "entries": [
-          { "item": "shotgun_d_paint", "ammo-item": "paintball_shot", "charges": 2, "contents-item": "shoulder_strap" } ]
+          { "item": "shotgun_pump_paint", "ammo-item": "paintball_shot", "charges": 10, "contents-item": "shoulder_strap", "custom-flags": [ "auto_wield" ] } ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -2457,12 +2546,13 @@
     "name": "Student - Pyromaniac",
     "description": "You always liked fires. Well, a little too much to be honest. Now that the world has ended, there is nobody to stop you from burning. Let the world BURN!",
     "points": 2,
-    "traits": [ "PYROMANIA", "GOODCARDIO2", "REGEN" ],
+    "traits": [ "PYROMANIA", "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "bunker_coat",
+          "webbing_belt",
           "zhigh_smart_phone",
           "socks",
           "fire_gauntlets",
@@ -2475,8 +2565,8 @@
           { "item": "flamethrower_fuel", "container-item": "jerrypack" }
         ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -2494,13 +2584,14 @@
       { "level": 1, "name": "swimming" },
       { "level": 1, "name": "survival" }
     ],
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "items": {
       "both": {
         "items": [
           "dress_shirt_zhigh",
           "zhigh_smart_phone",
           "socks",
+          "webbing_belt",
           "sneakers",
           "cowboy_hat_zhigh",
           "bullwhip",
@@ -2512,8 +2603,349 @@
           { "item": "kukri", "container-item": "sheath" }
         ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
+    },
+    "flags": [ "SCEN_ONLY" ]
+  },
+  {
+    "type": "profession",
+    "id": "zhighDiver",
+    "name": "Student - Diver",
+    "description": "You loved both diving and swimming. And now, the water became more dangerous than you expected. You are gonna need a bigger boat.",
+    "points": -2,
+    "traits": [ "REGEN_zhigh" ],
+    "items": {
+      "both": {
+        "items": [
+          "wetsuit",
+          "dress_shirt_zhigh",
+          "blazer_zhigh",
+          "webbing_belt",
+          "wetsuit",
+          "zhigh_smart_phone",
+          "wetsuit_gloves",
+          "socks",
+          "sneakers",
+          "dive_bag",
+          "diving_watch"
+        ],
+        "entries": [
+          { "item": "diveknife", "container-item": "sheath" }
+        ]
+      },
+      "male": [ "pants_zhigh", "tie_necktie_zhigh" ],
+      "female": [ "skirt_zhigh", "tie_bow_zhigh" ]
+    },
+    "flags": [ "SCEN_ONLY" ]
+  },
+  {
+    "type": "profession",
+    "id": "zhighFencer",
+    "name": "Student - Fencer",
+    "description": "You were an avid sport fencer, always practicing at local clubs and competing in tournaments.  You were on your way to have a few bouts at the club when the world ended.  Now you're in your most important tournament, the refs are all dead, and none of your opponents follow the rules.",
+    "points": -2,
+    "skills": [ { "level": 2, "name": "melee" }, { "level": 2, "name": "dodge" } ],
+    "traits": [ "MARTIAL_FENCING", "REGEN_zhigh" ],
+    "items": {
+      "both": {
+        "items": [
+          "under_armor_shorts",
+          "dress_shirt_zhigh",
+          "blazer_zhigh",
+          "webbing_belt",
+          "zhigh_smart_phone",
+          "socks",
+          "sneakers",
+          "fencing_mask",
+          "gauntlet_fencing"
+        ],
+        "entries": [
+          { "item": "fencing_epee", "container-item": "scabbard" }
+        ]
+      },
+      "male": [ "pants_zhigh", "tie_necktie_zhigh" ],
+      "female": [ "plastron_plastic", "skirt_zhigh", "tie_bow_zhigh" ]
+    },
+    "flags": [ "SCEN_ONLY" ]
+  },
+  {
+    "type": "profession",
+    "id": "zhighHevGunner",
+    "name": "Student - Heavy Gunner",
+    "description": "You were called 'heavy' or 'heavy gunner' in your airsoft group, due to your body size and the guns that you use. There is no one calling you heavy now, but the game goes on, wether you like it or not.",
+    "points": 5,
+    "skills": [
+      { "level": 2, "name": "gun" },
+      { "level": 3, "name": "rifle" },
+      { "level": 1, "name": "dodge" }
+    ],
+    "traits": [ "REGEN_zhigh" ],
+    "items": {
+      "both": {
+        "items": [
+          "dress_shirt_zhigh",
+          "zhigh_smart_phone",
+          "webbing_belt",
+          "socks",
+          "boots_scrap",
+          "gloves_tactical",
+          "armor_scrapsuit",
+          "bb",
+          "bb",
+          "bb",
+          "bb",
+          "BBbelt_500",
+          "BBbelt_500",
+          "mask_cavalry_iron"
+        ],
+        "entries": [
+          { "item": "bbM134", "ammo-item": "bb", "charges": [ 900, 1190 ], "contents-item": [ "shoulder_strap" ], "custom-flags": [ "auto_wield" ] }
+        ]
+      },
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
+    },
+    "flags": [ "SCEN_ONLY" ]
+  },
+  {
+    "type": "profession",
+    "id": "zhighRider",
+    "name": "Student - Rider",
+    "description": "You've always liked riding bikes. When the end of the world has knocked on your door, you did what you best - running, or riding away, using your bike. Although you do think that there is no escape, you always try to get away from your doom.",
+    "points": 0,
+    "skills": [ { "level": 4, "name": "driving" }, { "level": 1, "name": "mechanics" } ],
+    "traits": [ "REGEN_zhigh" ],
+    "items": {
+      "both": {
+        "items": [
+          "dress_shirt_zhigh",
+          "jacket_leather",
+          "webbing_belt",
+          "zhigh_smart_phone",
+          "socks",
+          "sneakers",
+          "helmet_bike",
+          "folding_bicycle",
+          "wristwatch"
+        ]
+      },
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
+    },
+    "flags": [ "SCEN_ONLY" ]
+  },
+  {
+    "type": "profession",
+    "id": "zhighMascot",
+    "name": "Student - Mascot",
+    "description": "You were the school mascot, before the world ended. At least you have your cute snowman costume on you.",
+    "points": -3,
+    "traits": [ "REGEN_zhigh" ],
+    "items": {
+      "both": {
+        "items": [
+          "dress_shirt_zhigh",
+          "webbing_belt",
+          "zhigh_smart_phone",
+          "socks",
+          "sneakers",
+          "snow_suit_head",
+          "snow_suit_body"
+        ]
+      },
+      "male": [ "boxer_shorts", "pants_zhigh" ],
+      "female": [ "bra", "panties", "skirt_zhigh" ]
+    },
+    "flags": [ "SCEN_ONLY" ]
+  },
+  {
+    "type": "profession",
+    "id": "zhighAgressor",
+    "name": "Student - Agressor",
+    "description": "You loved fireworks, and you still love them. You love it sooo much that you even want to enjoy it with the undead!",
+    "points": -2,
+    "traits": [ "REGEN_zhigh" ],
+    "items": {
+      "both": {
+        "items": [
+          "dress_shirt_zhigh",
+          "blazer_zhigh",
+          "webbing_belt",
+          "zhigh_smart_phone",
+          "socks",
+          "Rc_Packed",
+          "sneakers",
+          "wristwatch"
+        ],
+        "entries": [ 
+          { "item": "Rc_Packed", "custom-flags": [ "auto_wield" ] },
+          { "item": "golf_bag", "contents-group": "golfbag_AggressorZhigh" } ]
+      },
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
+    },
+    "flags": [ "SCEN_ONLY" ]
+  },
+  {
+    "type": "profession",
+    "id": "zhighAgent",
+    "name": "Student - Agent",
+    "description": "As a 007 wannabe, you grabbed your gear and got ready for the apocalypse. You do have some simple tools, but you are not so sure about your skills.",
+    "points": 0,
+    "skills": [
+      { "level": 2, "name": "pistol" },
+      { "level": 2, "name": "gun" }
+    ],
+    "traits": [ "REGEN_zhigh" ],
+    "items": {
+      "both": {
+        "items": [
+          "dress_shirt_zhigh",
+          "blazer_zhigh",
+          "webbing_belt",
+          "zhigh_smart_phone",
+          "socks",
+          "sneakers",
+          "combatnail",
+          "UPS_off",
+          "watch_conan",
+          "pen",
+          "penBlade",
+          "penChem",
+          "penLaser",
+          "penPick",
+          "penGun",
+          "penFlame",
+          "clip_wrist"
+        ],
+        "entries": [ 
+          { "item": "napalm", "container-item": "test_tube" },
+          { "item": "gas_chloramine", "container-item": "test_tube" },
+          { "item": "gas_smoke", "container-item": "test_tube" },
+          { "item": "gas_fungicidal", "container-item": "test_tube" },
+          { "item": "gas_insecticidal", "container-item": "test_tube" } ]
+      },
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
+    },
+    "flags": [ "SCEN_ONLY" ]
+  },
+  {
+    "type": "profession",
+    "id": "zhighstudent_with_books",
+    "name": "Student - Library Nerd",
+    "description": "They say reading is food for the brain, but those corpses seem to see your brain as food.  In your haste to escape, you grabbed the library's return box, but is there anything in there that might help you?",
+    "points": -1,
+    "traits": [ "REGEN_zhigh", "LOVES_BOOKS" ],
+    "items": {
+      "both": {
+        "items": [
+          "dress_shirt_zhigh",
+          "blazer_zhigh",
+          "webbing_belt",
+          "zhigh_smart_phone",
+          "socks",
+          "sneakers",
+          "wristwatch"
+        ],
+        "entries": [ { "contents-group": [ "manuals_school", "textbooks_school", "light_reading" ], "item": "box_small" } ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "bra", "boy_shorts" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "zhighTrooper",
+    "name": "Student - Trooper",
+    "description": "You've always liked military-related stuff; guns, uniform, helmets, etc. As you were on your way to a military related club, a story of war changed into a story of survival.",
+    "points": -1,
+    "skills": [ { "level": 3, "name": "gun" }, { "level": 3, "name": "rifle" } ],
+    "traits": [ "REGEN_zhigh" ],
+    "items": {
+      "both": {
+        "items": [
+          "dress_shirt_zhigh",
+          "chestrig",
+          "webbing_belt",
+          "zhigh_smart_phone",
+          "socks",
+          "gloves_tactical",
+          "bb",
+          "boots_combat",
+          "helmet_army",
+          "wristwatch"
+        ],
+        "entries": [
+          { "item": "knife_combat", "container-item": "sheath" },
+          { "item": "bbM4", "ammo-item": "bb", "charges": 300, "contents-item": "shoulder_strap", "custom-flags": [ "auto_wield" ] } ]
+      },
+      "male": [ "boxer_shorts", "pants_zhigh" ],
+      "female": [ "bra", "panties", "skirt_zhigh" ]
+    },
+    "flags": [ "SCEN_ONLY" ]
+  },
+  {
+    "type": "profession",
+    "id": "zhighDmr",
+    "name": "Student - Marksman",
+    "description": "You always liked to shoot guns. More likely, you liked to shoot guns quite accurately, and you were pretty good at it. While you were playing a round shooting BBs, apocalypse happened and it turned your world 180 degrees. You are nothing like the sniper from a cool movie, but determined enough to survive in this damn hellhole.",
+    "points": -1,
+    "skills": [ { "level": 3, "name": "gun" }, { "level": 3, "name": "rifle" } ],
+    "traits": [ "REGEN_zhigh" ],
+    "items": {
+      "both": {
+        "items": [
+          "dress_shirt_zhigh",
+          "tacvest",
+          "zhigh_smart_phone",
+          "webbing_belt",
+          "socks",
+          "sneakers",
+          "gloves_tactical",
+          "tac_helmet",
+          "bb",
+          "wristwatch"
+        ],
+        "entries": [
+          { "item": "bbmachinepistol", "ammo-item": "bb", "charges": 30 },
+          { "item": "bbDMR", "ammo-item": "bb", "charges": 60, "contents-item": "shoulder_strap", "custom-flags": [ "auto_wield" ] } ]
+      },
+      "male": [ "boxer_shorts", "pants_zhigh" ],
+      "female": [ "bra", "panties", "skirt_zhigh" ]
+    },
+    "flags": [ "SCEN_ONLY" ]
+  },
+  {
+    "type": "profession",
+    "id": "zhighPaintbPlayer",
+    "name": "Student - Paintball player",
+    "description": "Ever since you were a child you loved shooting, and you soon took a liking to the challenge of shooting with a shotgun. Why, if the world ended there's nothing you'd want at your side more than your trusty shotgun. So when it did, you made sure to bring it along.",
+    "points": -1,
+    "skills": [ { "level": 1, "name": "gun" }, { "level": 2, "name": "smg" } ],
+    "traits": [ "REGEN_zhigh" ],
+    "items": {
+      "both": {
+        "items": [
+          "dress_shirt_zhigh",
+          "doom_vest",
+          "webbing_belt",
+          "zhigh_smart_phone",
+          "socks",
+          "paintball",
+          "paintball",
+          "paintball",
+          "mbag",
+          "boots_steel",
+          "doom_fullhelmet"
+        ],
+        "entries": [
+          { "item": "paintballgun_pistol", "ammo-item": "paintball", "container-item": "holster", "charges": 17 },
+          { "item": "paintballgun", "ammo-item": "paintball", "charges": 75, "contents-item": "shoulder_strap", "custom-flags": [ "auto_wield" ] } ]
+      },
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   },
@@ -2523,20 +2955,21 @@
     "name": "Student - A/V Club Member",
     "description": "You were a member of the school A/V club. You're sure there's some way you can use your technical skills to help stay alive. You just haven't figured out how to make an awesome death ray yet.",
     "points": -2,
-    "traits": [ "GOODCARDIO2", "REGEN" ],
+    "traits": [ "REGEN_zhigh" ],
     "skills": [ { "level": 1, "name": "electronics" }, { "level": 1, "name": "computer" } ],
     "items": {
       "both": {
         "items": [
             "dress_shirt_zhigh",
             "blazer_zhigh",
+            "webbing_belt",
             "zhigh_smart_phone",
             "socks", "sneakers", "knit_scarf", "backpack",
             "mag_electronics", "wristwatch"
         ]
       },
-      "male": [ "boxer_shorts", "pants_zhigh", "tie_necktie_zhigh" ],
-      "female": [ "bra", "panties", "skirt_zhigh", "tie_bow_zhigh" ]
+      "male": [ "tie_necktie_zhigh", "boxer_shorts", "pants_zhigh" ],
+      "female": [ "tie_bow_zhigh", "bra", "panties", "skirt_zhigh" ]
     },
     "flags": [ "SCEN_ONLY" ]
   }
